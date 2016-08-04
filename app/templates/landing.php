@@ -1,18 +1,3 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,inital-scale=1">
-    <title>Needles and Ink | Find a Studio Near You</title>
-    <meta name="description" content="Holds the map to find a studio near you">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-      
-  </head>
-  <body>
-
-<!-- Menu -->
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -57,13 +42,21 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<h2><a href="blue-lotus-ink.html">Blue Lotus Tattoo Studio</a></h2>
-<h2><a href="ninja-flower-pierce.html">Ninjaflower Piercing Studio</a></h2>
 
+<!-- Images -->
+		<section class="row">
+  
+		  <div class="col-xs-3 col-md-4">
+		  <img src="img/HomePageImages/11200586_395460643971384_5685870414122981610_n.png" class="thumbnail"></a>
+		  </div>
+		  
+		  <div class="col-xs-3 col-md-4">
+		  <img src="img/HomePageImages/12027519_966043723451782_9207865277046006993_n.png" class="thumbnail"></a>
+		  </div>
 
+		  <div class="col-xs-3 col-md-4">
+		  <img src="img/HomePageImages/13417552_1753378074900997_8123188648688662319_n.png" class="thumbnail"></a>
+		  </div>
 
-<!-- JavaScript -->
-<script src="js/bootstrap.js"></script> 
-<script src="js/npm.js"></script>
-  </body>
-</html>
+		</section>
+		

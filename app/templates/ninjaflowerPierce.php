@@ -1,19 +1,3 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,inital-scale=1">
-		<title>Needles and Ink | Blue Lotus Tattoo Studio</title>
-		<meta name="description" content="Blue Lotus Tattoo Studio review page">
-		<link rel="stylesheet" href="css/styles.css">
-		<link rel="stylesheet" href="css/bootstrap.css">
-     <link rel="stylesheet" href="css/style.css">
-    	
-	</head>
-	<body>
-
-</nav>
-<!-- Menu -->
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -63,31 +47,34 @@
 <section class="container">
     <div class="row">
       <div class="col-md-6">
-      <img src="img/13466283_1119718551418185_4635071817118340955_n.jpg" class="alexh"></a>
+      <img src="img/face.jpg" class="pierce">
+      <img src="img/tongue.jpg" class="tongue">
       </div>
 
       <div class="col-md-6">
-        <h1>Blue Lotus Tattoo Studio</h1>
-        <p>Hello and Welcome to Blue Lotus Tattoo Studio.
-          <bt>
-        We are a Professional, Health Licensed Tattoo Studio providing high quality tattooing services.
-        Our aim is to provide you with exceptional workmanship and world class standards, accompanied by friendly, personable service, in a safe and hygienic environment.
-        You have the right to a great tattoo and an unforgettable experience!
-        Our work speaks for itself!
+        <h1>Ninjaflower Piercing Studio</h1>
         <br>
-        <ul>The Team.....</ul>
-        <ul>Clinton Jones (Tattoo Artist / Owner)</ul>
-        <ul>Mel Jones (Boss Lady / Manager / Owner)</ul>
-        <ul>Adam Cooley (Adamski)(Tattoo Artist)</ul>
-        <ul>Alex Hart (Tattoo Artist)</ul>
-        <br>
-        We Proudly Use Equipment Supplied by: Lucky Supply Tattoo Supply, Western Magnetic and Alla Prima 
-        Ink's by: Waverly, Intenze, Starbright, Dynamic, Alla Prima, Fusion & Classic Colour System's.
-        Needle's by: Luckys Supply Tattoo Supply, Troy Glen and Western Magnetic - Clint also makes his own, keeping the art of needle making alive.
+        <p>A new experience with an old tradition.
         <br>
         <br>
-        Machine's by: Jimmy Whitlock @ Lucky Supply Tattoo Supply, Neuma, Mickey Sharp'z, Eikon & Swash drive, Aaron Cain, Marv Learning, Swash drivewhip, Dre Rock @ Lucky Tattoo Supply.</p>
-     </div>
+        Body piercing by Scott Jania, one of New Zealand's two members of The Association of Professional Piercers. 21 years of experience - safe, simple, gentle.
+        All certified implant grade titanium so there is no risk of any allergy with the jewellery. US made.
+        <br>
+        <br>
+        We strive to provide the cleanest, best quality piercing to you. We use a Statim 2000 autoclave. This allows us to sterilise all components for each piercing, including the gloves, in an individual cycle right before your procedure. We use only Nitrile gloves, so there is no concern of latex allergies.
+        <br>
+        <br>
+        We implement the use of sterile technique without clamps with each piercing procedure. By autoclave sterilising every item which will be used in the piercing procedure immediately prior to use, handling these items using sterile technique, then disposing of everything used, we reduce the risk of disease or infection transmission to you, our client. This allows for faster healing with minimal risk of complications.
+        <br>
+        <br>
+        Our piercing techniques do not require the use of clamps, pliers, or other contrivances, which may cause damage to the tissue being pierced. By using gentle tissue massage and alignment techniques, we can provide you with a piercing which looks and feels good from day one.
+        <br> 
+        <br> 
+        Our suggested aftercare for new piercings are simple to follow and requires no extra effort on your part. By providing you with a safe, simple, and gentle piercing, we eliminate the need for the use of complicated or risky, untested chemical aftercare regimes.
+        <br>
+        <br>
+        Our jewellery for use in new piercings is certified to meet ASTM standards deemed safe for surgical implant materials. This gives you a guarantee that the materials placed in your new piercings have been scientifically tested to be safe for prolonged and repeated wear in the body. For initial piercings, we carry: glass (pyrex and quartz) and internally threaded titanium.</p>
+      </div>
       </div>
       </div>
 
@@ -143,8 +130,3 @@
         </form>
     </div>
 </div>
-
-	<script src="js/bootstrap.js"></script>	
-	<script src="js/npm.js"></script>
-	</body>
-</html>

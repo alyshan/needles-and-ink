@@ -1,17 +1,3 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,inital-scale=1">
-    <title>Needles and Ink | Edit Details</title>
-    <meta name="description" content="Holds the map to find a studio near you">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-      
-  </head>
-  <body>
-
-<!-- Menu -->
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -129,11 +115,3 @@
   </div>
 </div>
 <hr>
-
-
-
-<!-- JavaScript -->
-<script src="js/bootstrap.js"></script> 
-<script src="js/npm.js"></script>
-  </body>
-</html>

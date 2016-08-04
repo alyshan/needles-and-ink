@@ -1,17 +1,3 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,inital-scale=1">
-		<title>Needles and Ink | Home</title>
-		<meta name="description" content="Home page for Needles and Ink Review site">
-		<link rel="stylesheet" href="css/styles.css">
-		<link rel="stylesheet" href="css/bootstrap.css">
-    	
-	</head>
-	<body>
-
-<!-- Menu -->
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -56,26 +42,38 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-
-<!-- Images -->
-		<section class="row">
-  
-		  <div class="col-xs-3 col-md-4">
-		  <img src="img/HomePageImages/11200586_395460643971384_5685870414122981610_n.png" class="thumbnail"></a>
-		  </div>
-		  
-		  <div class="col-xs-3 col-md-4">
-		  <img src="img/HomePageImages/12027519_966043723451782_9207865277046006993_n.png" class="thumbnail"></a>
-		  </div>
-
-		  <div class="col-xs-3 col-md-4">
-		  <img src="img/HomePageImages/13417552_1753378074900997_8123188648688662319_n.png" class="thumbnail"></a>
-		  </div>
-
-		</section>
-		
-
-	<script src="//js/bootstrap.js"></script>	
-	<script src="//js/npm.js"></script>
-	</body>
-</html>
+<div id="form">
+<div class="form-group row">
+  <label for="example-text-input" class="col-xs-3 col-form-label">Studio Name</label>
+  <div class="col-xs-10">
+    <input class="form-control" type="text" value="Studio Name" id="example-text-input">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-email-input" class="col-xs-3 col-form-label">Studio Email</label>
+  <div class="col-xs-10">
+    <input class="form-control" type="email" value="example@example.com" id="example-email-input">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-url-input" class="col-xs-3 col-form-label">Studio Website</label>
+  <div class="col-xs-10">
+    <input class="form-control" type="url" value="Website" id="example-url-input">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-tel-input" class="col-xs-3 col-form-label">Studio Phone</label>
+  <div class="col-xs-10">
+    <input class="form-control" type="tel" value="(55)-555-5555" id="example-tel-input">
+  </div>
+  </div>
+ <div class="form-group">
+    <label for="exampleTextarea">About the Studio</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3" class="col-xs-3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Upload Studio Image</label>
+    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+    <small id="fileHelp" class="form-text text-muted">Please make sure your image is no larger than 570px by 570px</small>
+  </div>
+</div>
