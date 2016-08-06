@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,inital-scale=1">
-    <title></title>
-    <meta name="description" content="">
+    <title><?= $title ?></title>
+    <meta name="description" content="<?= $desc ?>">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">

@@ -17,7 +17,8 @@ switch ($page) {
 	break;
 	
 	case 'register';
-		echo $plates->render('register');
+		require 'app/controllers/RegisterController.php';
+		$controller = new RegisterController();
 	break;
 
 	case 'login';
@@ -48,6 +49,8 @@ switch ($page) {
 		echo $plates->render('landing');
 	break;
 }
+
+$controller->buildHTML();
 
 
 

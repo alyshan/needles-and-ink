@@ -1,4 +1,9 @@
-<?php $this->layout('master') ?>
+<?php 
+  $this->layout('master', [
+      'title'=>'Needles and Ink Review | Register',
+      'desc'=>'Sign up for an account and review your fave studios'
+    ]);
+?>
 
 
 <!-- Regsitration Form -->
@@ -54,7 +59,8 @@
       
       <hr class="colorgraph">
       <div class="row">
-        <div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+        <div class="col-xs-12 col-md-6">
+        <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
         <div class="col-xs-12 col-md-6"><a href="index.php?page=login" class="btn btn-success btn-block btn-lg">Already a Member?</a></div>
       </div>
     </form>

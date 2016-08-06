@@ -24,7 +24,7 @@
         <hr class="colorgraph">
         <div class="row">
           <div class="col-xs-6 col-sm-6 col-md-6">
-                        <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
+            <input type="submit" class="btn btn-lg btn-success btn-block" value="Log In">
                     
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6">
