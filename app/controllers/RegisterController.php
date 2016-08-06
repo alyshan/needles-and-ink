@@ -2,6 +2,11 @@
 
 class RegisterController {
 
+	public function __construct(){
+		if(isset());
+	}
+
+
 	public function registerAccount(){
 
 	}
@@ -10,7 +15,7 @@ class RegisterController {
 public function buildHTML(){
 
 	$plates = new League\Plates\Engine('app/templates');
-	
+
 	echo $plates->render('register');
 }
 

@@ -13,7 +13,8 @@ if (isset( $_GET['page']) ){
 
 switch ($page) {
 	case 'landing':
-		echo $plates->render('landing');
+		require 'app/controllers/LandingController.php';
+		$controller = new LandingController();
 	break;
 	
 	case 'register';

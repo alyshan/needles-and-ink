@@ -1,4 +1,9 @@
-<?php $this->layout('master') ?>
+<?php 
+  $this->layout('master', [
+      'title'=>'Needles and Ink Review | Home',
+      'desc'=>'Home page for Needles and Ink review site'
+    ]);
+?>
 
 <!-- Images -->
 		<section class="row">
