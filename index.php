@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require 'vendor/autoload.php';
 
 $plates = new League\Plates\Engine('app/templates');
@@ -28,7 +30,7 @@ switch ($page) {
 	break;
 	
 	case 'editDetails';
-		echo $plates->render('editDetails');
+		echo $_SESSION['id'];
 	break;
 
 	case 'map';
