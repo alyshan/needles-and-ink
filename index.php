@@ -4,12 +4,9 @@ require 'vendor/autoload.php';
 
 $plates = new League\Plates\Engine('app/templates');
 
-if (isset( $_GET['page']) ){
-	$page = $_GET['page'];
-}else{
-	$page = 'landing';
-}
+$page = isset($_GET['page']) ? $_GET['page'] : 'landing';
 
+$dbc = new mysqli('localhost', 'root', '', 'needles_and_ink');
 
 switch ($page) {
 	case 'landing':
@@ -19,7 +16,7 @@ switch ($page) {
 	
 	case 'register';
 		require 'app/controllers/RegisterController.php';
-		$controller = new RegisterController();
+		$controller = new RegisterController($dbc);
 	break;
 
 	case 'login';

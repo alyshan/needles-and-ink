@@ -12,38 +12,49 @@
 
 <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-    <form role="form" action="index.php?=register" method="post">
+    <form role="form" action="index.php?page=register" method="post">
       <h2>Sign Up Here</h2>
       <hr class="colorgraph">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
-                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+              <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1" value="<? isset($_POST['firstName']) ? $_POST['firstName'] : ''?>">
+              <?php if( isset($firstNameMessage) ): ?> 
+              <p><?= $firstNameMessage ?></p>
+              <?php endif; ?>
+
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
-            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2" value="<? isset($_POST['lastName']) ? $_POST['lastName'] : ''?>">
+            <?php if( isset($lastNameMessage) ): ?> 
+            <p><?= $lastNameMessage ?></p>
+            <?php endif; ?>
+
           </div>
         </div>
       </div>
       <div class="form-group">
-        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3" value="<? isset($_POST['displayName']) ? $_POST['displayName'] : ''?>">
+        <?php if( isset($displayNameMessage) ): ?> 
+            <p><?= $displayNameMessage ?></p>
+        <?php endif; ?>
+
       </div>
       <div class="form-group">
-        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4" value="<? isset($_POST['email']) ? $_POST['email'] : ''?>">
+        
+        <?php if( isset($emailMessage) ): ?> 
+            <p><?= $emailMessage ?></p>
+        <?php endif; ?>
+
       </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
             <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <div class="form-group">
-            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
-          </div>
-        </div>
+            <?php if( isset($passwordMessage) ): ?> 
+            <p><?= $passwordMessage ?></p>
+            <?php endif; ?>
       </div>
       <div class="row">
         <div class="col-xs-4 col-sm-3 col-md-3">
@@ -60,7 +71,7 @@
       <hr class="colorgraph">
       <div class="row">
         <div class="col-xs-12 col-md-6">
-        <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+        <input type="submit" value="Register" name="new-account" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
         <div class="col-xs-12 col-md-6"><a href="index.php?page=login" class="btn btn-success btn-block btn-lg">Already a Member?</a></div>
       </div>
     </form>
