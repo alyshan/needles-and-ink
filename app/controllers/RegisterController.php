@@ -118,6 +118,7 @@ private function validateRegistrationForm(){
 			$this->dbc->query($sql);
 
 			$_SESSION ['id'] = $this->dbc->insert_id;
+			
 
 			header('location: index.php?page=editDetails');
 		}

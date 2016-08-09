@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
-              <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1" value="<? isset($_POST['firstName']) ? $_POST['firstName'] : ''?>">
+              <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1" value="<?= isset($_POST['first_name']) ? $_POST['first_name'] : ''?>">
               <?php if( isset($firstNameMessage) ): ?> 
               <p><?= $firstNameMessage ?></p>
               <?php endif; ?>
@@ -27,7 +27,7 @@
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="form-group">
-            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2" value="<? isset($_POST['lastName']) ? $_POST['lastName'] : ''?>">
+            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2" value="<?= isset($_POST['last_name']) ? $_POST['last_name'] : '' ?>">
             <?php if( isset($lastNameMessage) ): ?> 
             <p><?= $lastNameMessage ?></p>
             <?php endif; ?>
@@ -36,14 +36,14 @@
         </div>
       </div>
       <div class="form-group">
-        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3" value="<? isset($_POST['displayName']) ? $_POST['displayName'] : ''?>">
+        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3" value="<?= isset($_POST['display_name']) ? $_POST['display_name'] : ''?>">
         <?php if( isset($displayNameMessage) ): ?> 
             <p><?= $displayNameMessage ?></p>
         <?php endif; ?>
 
       </div>
       <div class="form-group">
-        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4" value="<? isset($_POST['email']) ? $_POST['email'] : ''?>">
+        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4" value="<?= isset($_POST['email']) ? $_POST['email'] : ''?>">
         
         <?php if( isset($emailMessage) ): ?> 
             <p><?= $emailMessage ?></p>
