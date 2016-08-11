@@ -1,13 +1,12 @@
 <?php
 
-class RegisterController {
+class RegisterController extends PageController{
 
 private $emailMessage;
 private $passwordMessage;
 private $firstNameMessage;
 private $lastNameMessage;
 private $displayNameMessage;
-private $dbc;
 
 	public function __construct($dbc){
 	

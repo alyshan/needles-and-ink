@@ -1,5 +1,9 @@
-<?php $this->layout('master') ?>
-
+<?php 
+  $this->layout('master', [
+      'title'=>'Needles and Ink Review | Blue Lotus Tattoo',
+      'desc'=>'Review page for Blue Lotus Tattoo Studio'
+    ]);
+?>
 
 <!-- Studio info -->
 <section class="container">

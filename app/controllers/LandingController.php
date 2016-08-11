@@ -1,6 +1,6 @@
 <?php
 
-class LandingController {
+class LandingController extends PageController {
 
 	public function homePage(){
 
@@ -20,4 +20,3 @@ public function buildHTML(){
 
 
 
-?>

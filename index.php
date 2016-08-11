@@ -3,6 +3,7 @@
 session_start();
 
 require 'vendor/autoload.php';
+require 'app/controllers/PageController.php';
 
 $plates = new League\Plates\Engine('app/templates');
 
@@ -30,7 +31,8 @@ switch ($page) {
 	break;
 	
 	case 'editDetails';
-		echo $_SESSION['id'];
+		require 'app/controllers/EditDetailsController.php';
+		$controller = new EditDetailsController($dbc);
 	break;
 
 	case 'map';

@@ -45,7 +45,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="index.php?page=editeDetails">Edit Details</a></li>
+            <li><a href="index.php?page=editDetails">Edit Details</a></li>
             <li><a href="index.php?page=landing">Log Out</a></li>
             <li><a href="#">Edit Studio</a></li>
           </ul>

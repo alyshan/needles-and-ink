@@ -1,4 +1,9 @@
-<?php $this->layout('master') ?>
+<?php 
+  $this->layout('master', [
+      'title'=>'Needles and Ink Review | Account',
+      'desc'=>'Edit your account details'
+    ]);
+?>
 
 
 <!-- Edit Details Page -->
@@ -18,54 +23,50 @@
       
       <!-- edit form column -->
       <div class="col-md-9 personal-info">
-        <div class="alert alert-info alert-dismissable">
-          <a class="panel-close close" data-dismiss="alert">×</a> 
-          <i class="fa fa-coffee"></i>
-          This is an <strong>.alert</strong>. Use this to show important messages to the user.
-        </div>
+        
         <h3>Personal info</h3>
         
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" role="form" action="index.php?page=editDetails" method="post">
           <div class="form-group">
-            <label class="col-lg-3 control-label">First name:</label>
+            <label class="col-lg-3 control-label"  name="first-name">First name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="Jane">
+              <input class="form-control" type="text" value="">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-3 control-label">Last name:</label>
+            <label class="col-lg-3 control-label" name="last-name">Last name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="Doe">
+              <input class="form-control" type="text" value="">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-3 control-label">Email:</label>
+            <label class="col-lg-3 control-label" name="email">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="janesemail@gmail.com">
+              <input class="form-control" type="text" value="">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-3 control-label">Username:</label>
+            <label class="col-md-3 control-label" name="display-name">Display Name:</label>
             <div class="col-md-8">
-              <input class="form-control" type="text" value="janeuser">
+              <input class="form-control" type="text" value="">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-3 control-label">Password:</label>
+            <label class="col-md-3 control-label" name="password">Password:</label>
             <div class="col-md-8">
-              <input class="form-control" type="password" value="11111122333">
+              <input class="form-control" type="password" value="">
             </div>
           </div>
           <div class="form-group">
-            <label class="col-md-3 control-label">Confirm password:</label>
+            <label class="col-md-3 control-label" name="password">Confirm password:</label>
             <div class="col-md-8">
-              <input class="form-control" type="password" value="11111122333">
+              <input class="form-control" type="password" value="">
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
-              <input type="button" class="btn btn-primary" value="Save Changes">
+              <input type="button" class="btn btn-primary" value="Save Changes" name="save-changes">
               <span></span>
               <input type="reset" class="btn btn-default" value="Cancel">
             </div>
