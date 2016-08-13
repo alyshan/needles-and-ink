@@ -1,4 +1,9 @@
-<?php $this->layout('master') ?>
+<?php 
+  $this->layout('master', [
+      'title'=>'Needles and Ink Review | Login',
+      'desc'=>'Needles and Ink Login Page'
+    ]);
+?>
 
 
 <!-- Sign in  -->
@@ -11,10 +16,16 @@
         <h2>Please Sign In</h2>
         <hr class="colorgraph">
         <div class="form-group">
-                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
+          <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" value="<?= isset($_POST['login']) ? $_POST['email'] : '' ?>">
+              <?php if( isset($emailMessage) ): ?>
+                <p><?= $emailMessage ?></p>
+              <?php endif ?>
         </div>
         <div class="form-group">
-                    <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
+              <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
+               <?php if( isset($passwordMessage) ): ?>
+                <p><?= $passwordMessage ?></p>
+              <?php endif ?>
         </div>
         <span class="button-checkbox">
           <button type="button" class="btn" data-color="info">Remember Me</button>
@@ -24,7 +35,7 @@
         <hr class="colorgraph">
         <div class="row">
           <div class="col-xs-6 col-sm-6 col-md-6">
-            <input type="submit" class="btn btn-lg btn-success btn-block" value="Log In">
+            <input type="submit" class="btn btn-lg btn-success btn-block" value="Log In" name="login">
                     
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6">
