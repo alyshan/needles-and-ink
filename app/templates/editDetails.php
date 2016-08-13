@@ -30,26 +30,32 @@
           <div class="form-group">
             <label class="col-lg-3 control-label"  name="first-name">First name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" type="text" value="<?= isset($_POST['save-changes']) ? $_POST['first-name'] : '' ?>">
+                <?php isset($firstNameMessage) ? $firstNameMessage : ''?>
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label" name="last-name">Last name:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" type="text" value="<?= isset($_POST['save-changes']) ? $_POST['last-name'] : '' ?>">
+                <?php isset($lastNameMessage) ? $lastNameMessage : ''?>
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label" name="email">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" type="text" value="<?= isset($_POST['save-changes']) ? $_POST['email'] : '' ?>">
+                 <?php isset($displayNameMessage) ? $displayNameMessage : ''?>
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label" name="display-name">Display Name:</label>
             <div class="col-md-8">
-              <input class="form-control" type="text" value="">
+              <input class="form-control" type="text" value="<?= isset($_POST['save-changes']) ? $_POST['display-name'] : '' ?>">
             </div>
+              <?php if( isset($displayNameMessage) ):?>
+                <p><?= $displayNameMessage ?></p>
+              <?php endif?>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label" name="password">Password:</label>

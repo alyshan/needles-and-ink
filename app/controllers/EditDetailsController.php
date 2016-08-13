@@ -8,6 +8,7 @@ class EditDetailsController extends PageController {
 	private $emailMessage;
 
 
+
 	public function __construct($dbc){
 		parent::__construct();
 
@@ -22,28 +23,37 @@ class EditDetailsController extends PageController {
 
 	public function buildHTML(){
 
-		echo $this->plates->render('editDetails');
+
+
+		echo $this->plates->render('editDetails', $this->data);
 	}
 		private function processNewContactDetails(){
 			$totalErrors = 0;
 
 			if( strlen($_POST['first-name']) > 50 ){
 
-				$this->firstNameMessage = 'Must be at most 50 characters';
+				$this->data['firstNameMessage'] = '<p>Must be at most 50 characters</p>';
 				$totalErrors++;
 			}
 
 			if( strlen($_POST['last-name']) > 50 ){
 
-				$this->lastNameMessage = 'Must be at most 50 characters';
+				$this->data['lastNameMessage'] = '<p>Must be at most 50 characters</p>';
 				$totalErrors++;
 			}
 
 			if( strlen($_POST['display-name']) > 10 ){
 
-				$this->displayNameMessage = 'Must be at most 10 characters';
+				$this->data['displayNameMessage'] = '<p>Must be at most 10 characters</p>';
 				$totalErrors++;
 			}
+
+			if( strlen($_POST['email']) > 8 ){
+
+				$this->data['emailMessage'] = '<p>Must be at most 8 characters</p>';
+				$totalErrors++;
+			}
+
 
 			if( $totalErrors == 0 ){
 				
