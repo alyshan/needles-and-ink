@@ -26,6 +26,10 @@
                <?php if( isset($passwordMessage) ): ?>
                 <p><?= $passwordMessage ?></p>
               <?php endif ?>
+
+              <?php if( isset($loginMessage) ): ?>
+                <p><?= $loginMessage ?></p>
+              <?php endif ?>
         </div>
         <span class="button-checkbox">
           <button type="button" class="btn" data-color="info">Remember Me</button>

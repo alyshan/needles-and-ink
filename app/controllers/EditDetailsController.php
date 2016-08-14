@@ -23,8 +23,6 @@ class EditDetailsController extends PageController {
 
 	public function buildHTML(){
 
-
-
 		echo $this->plates->render('editDetails', $this->data);
 	}
 		private function processNewContactDetails(){
@@ -56,7 +54,17 @@ class EditDetailsController extends PageController {
 
 
 			if( $totalErrors == 0 ){
-				
+
+				$firstName = $this->dbc->real_escape_string($_POST['first-name']);
+				$lastName = $this->dbc->real_escape_string($_POST['last-name']);
+
+				$userID = $_SESSION['id'];
+				$sql = "UPDATE users
+						SET first_name = '$firstName', 
+							lastn_name = '$lastName' 
+						WHERE id = $userID ";
+
+				$this->dbc->query( $sql );
 			}
 		}
 
