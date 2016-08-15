@@ -2,8 +2,10 @@
 
 class LoginController extends PageController {
 
-	public function __contstruct($dbc){
-		parent::__contstruct();
+	public function __construct($dbc){
+		parent:: __construct();
+		
+		// $this->mustBeLoggedOut();
 
 		$this->dbc = $dbc;
 
@@ -11,7 +13,7 @@ class LoginController extends PageController {
 			$this->processLoginForm();
 		}
 	}
-
+	
 	public function buildHTML(){
 		echo $this->plates->render('login', $this->data);
 	}
@@ -33,7 +35,7 @@ private function processLoginForm(){
 
 		$filteredEmail = $this->dbc->real_escape_string($_POST['email'] );
 
-		$sql = "SELECT password
+		$sql = "SELECT id, password, privilege
 				FROM users
 				WHERE email = '$filteredEmail' ";
 
@@ -41,14 +43,16 @@ private function processLoginForm(){
 
 		if ($result->num_rows == 1){
 
-			$userData = $result->fetch_assoc;
+			$userData = $result->fetch_assoc();
 
 			$passwordResult = password_verify( $_POST['password'], $userData['password'] );
 
 				if ( $passwordResult == true ){
-					$_SESSION['id'] = userData['id'];
+					$_SESSION['id'] = $userData['id'];
+						$_SESSION['privilege'] = $userData['privilege'];
 
-					header('Location: index.php?page=editDetails');				
+					header('Location: index.php?page=editDetails');	
+								
 				}else{
 
 					$this->data['loginMessage'] = 'E-mail or Password incorrect';

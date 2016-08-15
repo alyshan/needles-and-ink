@@ -10,7 +10,7 @@ class EditDetailsController extends PageController {
 
 
 	public function __construct($dbc){
-		parent::__construct();
+		parent:: __construct();
 
 		$this->dbc = $dbc;
 
@@ -61,7 +61,7 @@ class EditDetailsController extends PageController {
 				$userID = $_SESSION['id'];
 				$sql = "UPDATE users
 						SET first_name = '$firstName', 
-							lastn_name = '$lastName' 
+							last_name = '$lastName' 
 						WHERE id = $userID ";
 
 				$this->dbc->query( $sql );
