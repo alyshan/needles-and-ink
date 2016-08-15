@@ -19,6 +19,7 @@ class LoginController extends PageController {
 	}
 
 private function processLoginForm(){
+
 	$totalErrors = 0;
 
 	if( strlen($_POST['email']) < 6 ){
@@ -35,12 +36,12 @@ private function processLoginForm(){
 
 		$filteredEmail = $this->dbc->real_escape_string($_POST['email'] );
 
-		$sql = "SELECT id, password, privilege
+		$sql = "SELECT id, password
 				FROM users
 				WHERE email = '$filteredEmail' ";
 
 		$result = $this->dbc->query($sql);
-
+	
 		if ($result->num_rows == 1){
 
 			$userData = $result->fetch_assoc();
@@ -49,7 +50,7 @@ private function processLoginForm(){
 
 				if ( $passwordResult == true ){
 					$_SESSION['id'] = $userData['id'];
-						$_SESSION['privilege'] = $userData['privilege'];
+					$_SESSION['privilege'] = $userData['privilege'];
 
 					header('Location: index.php?page=editDetails');	
 								

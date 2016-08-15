@@ -1,5 +1,7 @@
-<?php $this->layout('master') ?>
+<?php 
+  $this->layout('master', [
+      'title'=>'Needles and Ink Review | Find a Studio',
+      'desc'=>'Map to find a studio near you'
+    ]);
+?>
 
-
-<h2><a href="blue-lotus-ink.html">Blue Lotus Tattoo Studio</a></h2>
-<h2><a href="ninja-flower-pierce.html">Ninjaflower Piercing Studio</a></h2>
