@@ -59,7 +59,8 @@
 
  <?= $this->section('content') ?>
 
-
+  <script src="js/map.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?callback=initMap&libraries=geometry"></script>
   <script src="js/bootstrap.js"></script> 
   <script src="js/npm.js"></script>
   </body>

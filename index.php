@@ -38,7 +38,7 @@ switch ($page) {
 
 	case 'map';
 		require 'app/controllers/MapController.php';
-		$controller = new MapController($dbc);
+		$controller = new MapController();
 	break;
 
 	case 'ninjaflowerPierce':

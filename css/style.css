@@ -178,3 +178,23 @@
   margin-top: 50px !important;
   margin-left: 30px !important;
 }
+
+/*Map*/
+#map-container {
+  height: 550px;
+  width: 550px;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+#store-picker{
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+
+}
+
+
+
+
+

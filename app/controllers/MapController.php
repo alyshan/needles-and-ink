@@ -1,9 +1,17 @@
-<?php  
+<?php
 
 class MapController extends PageController {
-	public function __construct($dbc) {
-		parent:: __construct();
-			$this->dbc = $dbc;
+
+	public function homePage(){
+
 	}
 
-		
+
+public function buildHTML(){
+
+	$plates = new League\Plates\Engine('app/templates');
+	
+	echo $plates->render('map');
+}
+
+}
