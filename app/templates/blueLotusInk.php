@@ -40,11 +40,13 @@
 </section>
 
 <!-- Comment box -->
+<?php if(isset($_SESSION['id'])): ?>
 <div class="detailBox">
     <div class="titleBox">
       <label>Comment Box</label>
         <button type="button" class="close" aria-hidden="true">&times;</button>
     </div>
+    
     <div class="commentBox">
         
         <p class="taskDescription">Type your review here!</p>
@@ -89,3 +91,10 @@
         </form>
     </div>
 </div>
+    <?php endif; ?>
+
+
+
+
+
+

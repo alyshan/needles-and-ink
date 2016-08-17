@@ -29,6 +29,13 @@ switch ($page) {
 
 	case 'logout': 
 		unset($_SESSION['id']); 
+		unset($_SESSION['first_name']); 
+		unset($_SESSION['last_name']);
+		unset($_SESSION['email']); 
+		unset($_SESSION['password']);  
+		unset($_SESSION['display_name']); 
+		unset($_SESSION['image']); 
+		unset($_SESSION['privilege']); 
 		header('Location: index.php');
 	break;
 

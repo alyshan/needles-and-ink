@@ -15,6 +15,7 @@ function initMap() {
 		center: {
 			lat: -41.294989,
 			lng: 174.783620,
+
 		},
 		zoom: 16
 	};
@@ -35,7 +36,7 @@ function placeStoreMarkers() {
 			title: "Blue Lotus Tattoo Studio",
 			lat: -36.741395,
 			lng: 174.711233,
-			
+
 		},
 
 		{

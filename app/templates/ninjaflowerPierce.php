@@ -39,6 +39,7 @@
 </section>
 
 <!-- Comment box -->
+<?php if(isset($_SESSION['id'])): ?>
 <div class="detailBox">
     <div class="titleBox">
       <label>Comment Box</label>
@@ -88,3 +89,9 @@
         </form>
     </div>
 </div>
+<?php endif; ?>
+
+
+
+
+
