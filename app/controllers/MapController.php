@@ -2,7 +2,7 @@
 
 class MapController extends PageController {
 
-	public function homePage(){
+	public function mapPage(){
 
 	}
 

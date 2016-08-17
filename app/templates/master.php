@@ -2,10 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,inital-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101
     <title><?= $title ?></title>
     <meta name="description" content="<?= $desc ?>">
-    <link rel="stylesheet" href="css/styles.css">
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
       
@@ -58,10 +61,9 @@
 
 
  <?= $this->section('content') ?>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/map.js"></script>
-  <script src="http://maps.googleapis.com/maps/api/js?callback=initMap&libraries=geometry"></script>
-  <script src="js/bootstrap.js"></script> 
-  <script src="js/npm.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3G6J2-dbvIjn0c1xy1H9Khnw56COElnA&callback=initMap"type="text/javascript"></script>
+  <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

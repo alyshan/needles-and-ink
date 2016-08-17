@@ -25,7 +25,7 @@ function initMap() {
 
 	placeStoreMarkers();
 
-	getUserLocation();
+	// getUserLocation();
 }
 
 function placeStoreMarkers() {
