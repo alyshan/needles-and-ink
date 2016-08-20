@@ -4,8 +4,6 @@ class LoginController extends PageController {
 
 	public function __construct($dbc){
 		parent:: __construct();
-		
-		// $this->mustBeLoggedOut();
 
 		$this->dbc = $dbc;
 
@@ -22,8 +20,8 @@ private function processLoginForm(){
 
 	$totalErrors = 0;
 
-	if( strlen($_POST['email']) < 6 ){
-		$this->data['emailMessage']='Invalid E-Mail';
+	if( strlen($_POST['display_name']) < 6 ){
+		$this->data['displayNameMessage']='Invalid Display Name';
 		$totalErrors ++;
 		}
 
@@ -34,11 +32,11 @@ private function processLoginForm(){
 
 	if($totalErrors == 0) {
 
-		$filteredEmail = $this->dbc->real_escape_string($_POST['email'] );
+		$filteredDisplayName = $this->dbc->real_escape_string($_POST['display_name'] );
 
 		$sql = "SELECT id, password
 				FROM users
-				WHERE email = '$filteredEmail' ";
+				WHERE display_name = '$filteredDisplayName' ";
 
 		$result = $this->dbc->query($sql);
 	
@@ -52,17 +50,17 @@ private function processLoginForm(){
 					$_SESSION['id'] = $userData['id'];
 					$_SESSION['privilege'] = $userData['privilege'];
 
-					header('Location: index.php?page=editDetails');	
+					header('Location: index.php?page=account');	
 								
 				}else{
 
-					$this->data['loginMessage'] = 'E-mail or Password incorrect';
+					$this->data['loginMessage'] = 'Display Name or Password incorrect';
 				}
 
 
 		}else{
 
-			$this->data['loginMessage'] = 'E-mail or Password incorrect';
+			$this->data['loginMessage'] = 'Display Name or Password incorrect';
 			}
 
 		}

@@ -46,13 +46,13 @@
       </form>
       <?php if(!isset($_SESSION['id'])): ?>
         <li><a href="index.php?page=login">Login</a></li>
-      <?php endif; ?>
         <li><a href="index.php?page=register">Register</a></li>
+          <?php endif; ?>
         <?php if(isset($_SESSION['id'])): ?>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="index.php?page=editDetails">Edit Details</a></li>
+            <li><a href="index.php?page=account">Edit Details</a></li>
             <li><a href="#">Edit Studio</a></li>
             <li><a href="index.php?page=logout">Log Out</a></li>
             

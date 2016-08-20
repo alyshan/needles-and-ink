@@ -43,9 +43,9 @@ switch ($page) {
 		echo $plates->render('blueLotusInk');
 	break;
 	
-	case 'editDetails';
-		require 'app/controllers/EditDetailsController.php';
-		$controller = new EditDetailsController($dbc);
+	case 'account';
+		require 'app/controllers/AccountController.php';
+		$controller = new AccountController($dbc);
 	break;
 
 	case 'map';

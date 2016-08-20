@@ -7,8 +7,6 @@ class StudioController extends PageController {
 	}
 
 
-// if( !isset($_SESSION['id']) ){
-// }
 
 public function buildHTML(){
 

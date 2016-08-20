@@ -1,6 +1,6 @@
 <?php
 
-class EditDetailsController extends PageController {
+class AccountController extends PageController {
 
 	private $firstNameMessage;
 	private $lastNameMessage;
@@ -21,11 +21,15 @@ class EditDetailsController extends PageController {
 		}
 	}
 
+
 	public function buildHTML(){
 
-		echo $this->plates->render('editDetails', $this->data);
+
+		echo $this->plates->render('account', $this->data);
 	}
+
 		private function processNewContactDetails(){
+
 			$totalErrors = 0;
 
 			if( strlen($_POST['first-name']) > 50 ){
@@ -59,6 +63,7 @@ class EditDetailsController extends PageController {
 				$lastName = $this->dbc->real_escape_string($_POST['last-name']);
 
 				$userID = $_SESSION['id'];
+
 				$sql = "UPDATE users
 						SET first_name = '$firstName', 
 							last_name = '$lastName' 

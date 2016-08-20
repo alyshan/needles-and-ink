@@ -8,7 +8,7 @@
 
 <!-- Edit Details Page -->
 <div class="container">
-    <h1>Edit Profile</h1>
+    <h1>Edit Account</h1>
     <hr>
   <div class="row">
       <!-- left column -->
@@ -26,7 +26,7 @@
         
         <h3>Personal info</h3>
         
-        <form class="form-horizontal" role="form" action="index.php?page=editDetails" method="post">
+        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-lg-3 control-label"  name="first-name">First name:</label>
             <div class="col-lg-8">
@@ -34,6 +34,9 @@
                 <?php isset($firstNameMessage) ? $firstNameMessage : ''?>
             </div>
           </div>
+        </form>
+
+        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-lg-3 control-label" name="last-name">Last name:</label>
             <div class="col-lg-8">
@@ -41,6 +44,9 @@
                 <?php isset($lastNameMessage) ? $lastNameMessage : ''?>
             </div>
           </div>
+        </form>
+
+        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-lg-3 control-label" name="email">Email:</label>
             <div class="col-lg-8">
@@ -48,6 +54,9 @@
                  <?php isset($displayNameMessage) ? $displayNameMessage : ''?>
             </div>
           </div>
+        </form>
+
+        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-md-3 control-label" name="display-name">Display Name:</label>
             <div class="col-md-8">
@@ -57,18 +66,26 @@
                 <p><?= $displayNameMessage ?></p>
               <?php endif?>
           </div>
+        </form>
+
+        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-md-3 control-label" name="password">Password:</label>
             <div class="col-md-8">
               <input class="form-control" type="password" value="">
             </div>
           </div>
+        </form>
+
+        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-md-3 control-label" name="password">Confirm password:</label>
             <div class="col-md-8">
               <input class="form-control" type="password" value="">
             </div>
           </div>
+
+        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
@@ -78,6 +95,14 @@
             </div>
           </div>
         </form>
+
+        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
+          <span>I wish to deactivate my account <input type="checkbox"></span> 
+            <span>Please enter your password to confirm: </span>
+            <input type="password" placeholder="Password"> 
+          <input type="submit" value="Confirm" name="deactivate-account">
+        </form>
+
       </div>
   </div>
 </div>

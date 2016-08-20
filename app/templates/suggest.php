@@ -5,8 +5,14 @@
     ]);
 ?>
 
+<?php if (!isset($_SESSION['id'])):?>
 
-<!-- Suggest a studio page -->
+       <h2 id="studio">Please login or regisiter to suggest a studio </h2>
+          <img src="img/beedoo.jpg" class="center-block">
+<? endif;?>
+
+
+  <?php if(isset($_SESSION['id'])): ?>
 <div id="form">
 <div class="form-group row">
   <label for="example-text-input" class="col-xs-3 col-form-label">Studio Name</label>
@@ -42,3 +48,4 @@
     <small id="fileHelp" class="form-text text-muted">Please make sure your image is no larger than 570px by 570px</small>
   </div>
 </div>
+<? endif;?>

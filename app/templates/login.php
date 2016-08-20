@@ -15,12 +15,14 @@
       <fieldset>
         <h2>Please Sign In</h2>
         <hr class="colorgraph">
+        
         <div class="form-group">
-          <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" value="<?= isset($_POST['login']) ? $_POST['email'] : '' ?>">
-              <?php if( isset($emailMessage) ): ?>
-                <p><?= $emailMessage ?></p>
-              <?php endif ?>
-        </div>
+        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3" value="<?= isset($_POST['display_name']) ? $_POST['display_name'] : ''?>">
+        <?php if( isset($displayNameMessage) ): ?> 
+            <p><?= $displayNameMessage ?></p>
+        <?php endif; ?>
+
+      </div>
         <div class="form-group">
               <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
                <?php if( isset($passwordMessage) ): ?>
