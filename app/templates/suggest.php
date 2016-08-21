@@ -11,8 +11,9 @@
           <img src="img/beedoo.jpg" class="center-block">
 <? endif;?>
 
-
   <?php if(isset($_SESSION['id'])): ?>
+
+<form action="index.php?=suggst" method="post" enctype="multipart/form-data">
 <div id="form">
 <div class="form-group row">
   <label for="example-text-input" class="col-xs-3 col-form-label">Studio Name</label>
@@ -40,7 +41,7 @@
   </div>
  <div class="form-group">
     <label for="exampleTextarea">About the Studio</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3" class="col-xs-3"></textarea>
+    <textarea class="form-control" id="exampleTextarea" rows="10" class="col-md-2"></textarea>
   </div>
   <div class="form-group">
     <label for="exampleInputFile">Upload Studio Image</label>
@@ -48,4 +49,8 @@
     <small id="fileHelp" class="form-text text-muted">Please make sure your image is no larger than 570px by 570px</small>
   </div>
 </div>
+
+<input type="submit" name="new-studio" class="btn btn-primary"  value="Submit">
+
+</form>
 <? endif;?>

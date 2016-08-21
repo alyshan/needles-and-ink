@@ -2,13 +2,6 @@
 
 class AccountController extends PageController {
 
-	private $firstNameMessage;
-	private $lastNameMessage;
-	private $dispayNameMessage;
-	private $emailMessage;
-
-
-
 	public function __construct($dbc){
 		parent:: __construct();
 
@@ -26,10 +19,10 @@ class AccountController extends PageController {
 
 
 		echo $this->plates->render('account', $this->data);
+
 	}
-
 		private function processNewContactDetails(){
-
+			
 			$totalErrors = 0;
 
 			if( strlen($_POST['first-name']) > 50 ){

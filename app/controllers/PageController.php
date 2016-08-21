@@ -12,7 +12,6 @@ abstract class PageController {
 
 		$this->plates = new League\Plates\Engine('app/templates');
 
-		
 	}
 	
 

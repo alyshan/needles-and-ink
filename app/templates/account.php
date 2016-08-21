@@ -34,9 +34,7 @@
                 <?php isset($firstNameMessage) ? $firstNameMessage : ''?>
             </div>
           </div>
-        </form>
-
-        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
+          
           <div class="form-group">
             <label class="col-lg-3 control-label" name="last-name">Last name:</label>
             <div class="col-lg-8">
@@ -44,9 +42,7 @@
                 <?php isset($lastNameMessage) ? $lastNameMessage : ''?>
             </div>
           </div>
-        </form>
 
-        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-lg-3 control-label" name="email">Email:</label>
             <div class="col-lg-8">
@@ -54,9 +50,7 @@
                  <?php isset($displayNameMessage) ? $displayNameMessage : ''?>
             </div>
           </div>
-        </form>
 
-        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-md-3 control-label" name="display-name">Display Name:</label>
             <div class="col-md-8">
@@ -66,18 +60,14 @@
                 <p><?= $displayNameMessage ?></p>
               <?php endif?>
           </div>
-        </form>
 
-        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-md-3 control-label" name="password">Password:</label>
             <div class="col-md-8">
               <input class="form-control" type="password" value="">
             </div>
           </div>
-        </form>
-
-        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
+ 
           <div class="form-group">
             <label class="col-md-3 control-label" name="password">Confirm password:</label>
             <div class="col-md-8">
@@ -85,7 +75,6 @@
             </div>
           </div>
 
-        <form class="form-horizontal" role="form" action="index.php?page=account" method="post">
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">

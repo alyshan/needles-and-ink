@@ -40,7 +40,8 @@ switch ($page) {
 	break;
 
 	case 'blueLotusInk':
-		echo $plates->render('blueLotusInk');
+		require'app/controllers/BlueLotusController.php';
+		$controller = new BlueLotusController();
 	break;
 	
 	case 'account';
@@ -54,11 +55,13 @@ switch ($page) {
 	break;
 
 	case 'ninjaflowerPierce':
-		echo $plates->render('ninjaflowerPierce');
+		require'app/controllers/NinjaflowerController.php';
+		$controller = new NinjaflowerController();
 	break;
 	
 	case 'suggest';
-		echo $plates->render('suggest');
+		require 'app/controllers/SuggestController.php';
+		$controller = new SuggestController($dbc);
 	break;
 
 	default:

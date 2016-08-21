@@ -1,6 +1,6 @@
 <?php 
   $this->layout('master', [
-      'title'=>'Needles and Ink Review | Blue Lotus Tattoo',
+      'title'=>'Blue Lotus Tattoo',
       'desc'=>'Review page for Blue Lotus Tattoo Studio'
     ]);
 ?>
