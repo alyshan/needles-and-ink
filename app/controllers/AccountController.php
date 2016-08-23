@@ -17,10 +17,10 @@ class AccountController extends PageController {
 
 	public function buildHTML(){
 
-
 		echo $this->plates->render('account', $this->data);
-
 	}
+
+	
 		private function processNewContactDetails(){
 			
 			$totalErrors = 0;
@@ -64,6 +64,7 @@ class AccountController extends PageController {
 
 				$this->dbc->query( $sql );
 			}
+
 		}
 
 }

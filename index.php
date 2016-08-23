@@ -40,8 +40,8 @@ switch ($page) {
 	break;
 
 	case 'blueLotusInk':
-		require'app/controllers/BlueLotusController.php';
-		$controller = new BlueLotusController();
+		require'app/controllers/StudioController.php';
+		$controller = new StudioController();
 	break;
 	
 	case 'account';

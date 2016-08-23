@@ -59,10 +59,6 @@ function placeStoreMarkers() {
 			id: i,
 		});
 
-	google.maps.event.addListener(marker, 'click', function() {
-    window.location.href = this.url;
-});
-
 		allMarkers.push(marker);
 	}
 
