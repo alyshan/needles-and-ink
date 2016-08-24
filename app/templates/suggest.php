@@ -38,6 +38,22 @@
   </div>
 </div>
 <div class="form-group row">
+  <label for="example-text-input" class="col-xs-3 col-form-label">Studio Street Address</label>
+  <div class="col-xs-10">
+    <input class="form-control" type="text" placeholder="Street Address" id="example-text-input"
+     name="street-address">
+    <?= isset($streetAddressMessage) ?  $streetAddressMessage : ''?>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-text-input" class="col-xs-3 col-form-label">Studio City</label>
+  <div class="col-xs-10">
+    <input class="form-control" type="text" placeholder="City" id="example-text-input"
+     name="city">
+    <?= isset($cityMessage) ?  $cityMessage : ''?>
+  </div>
+</div>
+<div class="form-group row">
   <label for="example-tel-input" class="col-xs-3 col-form-label">Studio Phone</label>
   <div class="col-xs-10">
     <input class="form-control" type="tel" placeholder="(55)-555-5555" id="example-tel-input" name="studio-phone">
@@ -46,7 +62,7 @@
   </div>
  <div class="form-group">
     <label for="exampleTextarea">About the Studio</label>
-    <textarea class="form-control" id="exampleTextarea" rows="10" class="col-md-2" name="desc"></textarea>
+    <textarea class="form-control" id="exampleTextarea" rows="5" class="col-xs-2" name="desc"></textarea>
       <?= isset($descMessage) ?  $descMessage : ''?>
   </div>
   <div class="form-group">
