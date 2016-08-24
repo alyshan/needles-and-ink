@@ -57,7 +57,11 @@
   </div>
 </div>
 
-<input type="submit" name="new-studio" class="btn btn-primary"  value="Submit">
-
+<div class="form-group row">
+  <div class="col-xs-10">
+   <input type="submit" name="new-studio" class="btn btn-primary" class="col-xs-4 col-form-label value="Submit">
+    <?= isset($suggestMessage) ?  $suggestMessage : ''?>
+  </div>
+</div>
 </form>
 <? endif;?>

@@ -83,6 +83,12 @@ class SuggestController extends PageController {
 					VALUES('$studioName', '$desc', '$email', '$website', '$phone', '$desc', $userID)";
 
 					$this->dbc->query($sql);
+
+					if( $this->dbc->affected_rows ){
+						$this->data['suggestMessage'] = 'Thank you for you suggestion!';
+					}else{
+						$this->data['suggestMessage'] = 'Something went wrong!';
+					}
 		}
 	}
 }
