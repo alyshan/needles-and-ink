@@ -24,7 +24,6 @@ class SuggestController extends PageController {
 		
 		$studioName = trim($_POST['studio-name']); 
 		$desc = trim($_POST['desc']);
-		$website = trim($_POST['website-link']);
 		$streetAddress = trim($_POST['street-address']);
 		$city = trim($_POST['city']);
 		$phone = trim($_POST['studio-phone']);
@@ -45,14 +44,6 @@ class SuggestController extends PageController {
 				$totalErrors++;
 			} elseif( strlen( $email) > 50 ){
 				$this->data['studioEmailMessage'] = '<p>Cannont be more than 50 characters</p>';
-				$totalErrors++;
-		}
-
-		if( strlen($website) == 0 ){
-				$this->data['websiteLinkMessage'] = '<p>Required</p>';
-				$totalErrors++;
-			} elseif( strlen( $website) > 200 ){
-				$this->data['websiteLinkMessage'] = '<p>Cannont be more than 200 characters</p>';
 				$totalErrors++;
 		}
 
@@ -91,7 +82,6 @@ class SuggestController extends PageController {
 
 				$studioName = $this->dbc->real_escape_string($studioName);
 				$desc = $this->dbc->real_escape_string($desc);
-				$website = $this->dbc->real_escape_string($website);
 				$streetAddress = $this->dbc->real_escape_string($streetAddress);
 				$city = $this->dbc->real_escape_string($city);
 				$email = $this->dbc->real_escape_string($email);
@@ -99,8 +89,8 @@ class SuggestController extends PageController {
 
 				$userID = $_SESSION['id'];
 
-				$sql = "INSERT INTO suggest (studio_name, studio_email, studio_link, studio_phone, studio_address1, studio_address2, description, user_id)
-					VALUES('$studioName', '$desc', '$email', '$website', '$streetAddress', '$city' '$phone', '$desc', $userID)";
+				$sql = "INSERT INTO suggest (studio_name, studio_email, studio_phone, studio_address1, studio_address2, description, user_id)
+					VALUES('$studioName', '$desc', '$email', '$streetAddress', '$city' '$phone', '$desc', $userID)";
 
 					$this->dbc->query($sql);
 

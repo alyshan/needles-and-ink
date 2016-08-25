@@ -39,9 +39,9 @@ switch ($page) {
 		header('Location: index.php');
 	break;
 
-	case 'blueLotusInk':
+	case 'studio':
 		require'app/controllers/StudioController.php';
-		$controller = new StudioController();
+		$controller = new StudioController($dbc);
 	break;
 	
 	case 'account';
@@ -54,11 +54,6 @@ switch ($page) {
 		$controller = new MapController($dbc);
 	break;
 
-	case 'ninjaflowerPierce':
-		require'app/controllers/NinjaflowerController.php';
-		$controller = new NinjaflowerController();
-	break;
-	
 	case 'suggest';
 		require 'app/controllers/SuggestController.php';
 		$controller = new SuggestController($dbc);

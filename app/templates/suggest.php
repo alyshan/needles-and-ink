@@ -13,6 +13,8 @@
 
   <?php if(isset($_SESSION['id'])): ?>
 
+   <?= isset($suggestMessage) ?  $suggestMessage : ''?>
+
 <form action="index.php?page=suggest" method="post" enctype="multipart/form-data">
 <div id="form">
 <div class="form-group row">
@@ -27,14 +29,6 @@
   <div class="col-xs-10">
     <input class="form-control" type="email" placeholder="example@example.com" id="example-email-input" name="studio-email">
     <?= isset($studioEmailMessage) ?  $studioEmailMessage : ''?>
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-url-input" class="col-xs-3 col-form-label">Studio Website or Facebook</label>
-  <div class="col-xs-10">
-    <input class="form-control" type="url" placeholder="Website or Facebook" id="example-url-input"
-     name="website-link">
-    <?= isset($websiteLinkMessage) ?  $websiteLinkMessage : ''?>
   </div>
 </div>
 <div class="form-group row">
@@ -76,7 +70,6 @@
 <div class="form-group row">
   <div class="col-xs-10">
    <input type="submit" name="new-studio" class="btn btn-primary" class="col-xs-4 col-form-label value="Submit">
-    <?= isset($suggestMessage) ?  $suggestMessage : ''?>
   </div>
 </div>
 </form>

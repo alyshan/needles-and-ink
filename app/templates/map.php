@@ -13,7 +13,9 @@
 <?php foreach($allStudios as $studio): ?>
 <article>
 	 	<div>
+	 	<a href="index.php?page=studio&studioid=<?= $studio['id'] ?>">
 	 	<h1> <?= $studio['studio_name'] ?> </h1>
+	 	</a>
 	 	<p><?= $studio['studio_phone'] ?></p>
 	 	<p><?= $studio['studio_address1'] ?>
 	 		<br>
