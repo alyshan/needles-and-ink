@@ -24,13 +24,12 @@ class StudioController extends PageController {
 
 	private function getPostData(){
 
-		$studioID = $this->dbc->real_escape_string($_GET['studioid']);
+		$studioID = $this->dbc->real_escape_string($_GET['studio_id']);
 
 		$sql = "SELECT studio_name, studio_email, studio_phone, studio_address1, studio_address2, description, image
 				FROM suggest
 				WHERE id = $studioID";
-
-
+die($sql);
 		$result = $this->dbc->query($sql);
 
 			if( !$result || $result->num_rows == 0 ){
@@ -44,7 +43,6 @@ class StudioController extends PageController {
 					JOIN users
 					ON comments.user_id = users.id
 					WHERE studio_id = $studioID
-				
 					ORDER BY created_at DESC";
 
 			$result = $this->dbc->query($sql);
@@ -60,12 +58,12 @@ class StudioController extends PageController {
 			if($totalErrors == 0){
 				$comment = $this->dbc->real_escape_string($_POST['comment']);
 				$userID = $_SESSION['id'];
-				$studioID = $this->dbc->real_escape_string($_GET['studioid']);
+				$studioID = $this->dbc->real_escape_string($_GET['studio_id']);
 
 				$sql = "INSERT INTO comments (comment, user_id, studio_id)
 						 VALUES ('$comment', $userID, $studioID)";
-
-				$this->dbc->query($sql);
+			
+			$this->dbc->query($sql);
 			}
 
 

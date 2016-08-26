@@ -4,8 +4,8 @@
       'desc'=>'Edit your comment'
     ]);
 ?>
-
-<h1>Edit your comment</h1>
+<div class="editComment">
+<h1 >Edit your comment</h1>
 
 <form action="index.php?page=edit-comment&id=<?= $_GET['id'] ?>" method="post">
 	
@@ -15,3 +15,5 @@
 
 
 </form>
+
+</div>

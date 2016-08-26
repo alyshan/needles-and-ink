@@ -67,7 +67,7 @@ class EditCommentController extends PageController {
 
 			$this->dbc->query($sql);
 
-			header('Location: index.php?page=studio&studioid='.$this->data['studio_id']);					
+			header('Location: index.php?page=studio&studio_id='.$this->data['studio_id']);					
 
 		}
 	}

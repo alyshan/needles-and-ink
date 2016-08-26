@@ -53,7 +53,7 @@
                       <p><?= $this->e($comment['comment']) ?></p>
                 </div>
             </li>
-          <?php if(isset($_SESSION['id'])){ 
+      <?php if(isset($_SESSION['id'])){ 
 
                 if($_SESSION['id'] == $comment['user_id'] ){
                   
@@ -62,7 +62,6 @@
                 }
 
           }?>
-
          <?php endforeach ?>
         </ul>
         <form class="form-inline" role="form">

@@ -13,7 +13,7 @@
 <?php foreach($allStudios as $studio): ?>
 <article>
 	 	<div>
-	 	<a href="index.php?page=studio&studioid=<?= $studio['id'] ?>">
+	 	<a href="index.php?page=studio&studio_id=<?= $studio['id'] ?>">
 	 	<h1> <?= $this->e($studio['studio_name']) ?> </h1>
 	 	</a>
 	 	<p><?= $this->e($studio['studio_phone']) ?></p>
