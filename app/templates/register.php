@@ -1,6 +1,6 @@
 <?php 
   $this->layout('master', [
-      'title'=>'Needles and Ink Review | Register',
+      'title'=>'Register',
       'desc'=>'Sign up for an account and review your fave studios'
     ]);
 ?>

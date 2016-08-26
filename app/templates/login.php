@@ -1,6 +1,6 @@
 <?php 
   $this->layout('master', [
-      'title'=>'Needles and Ink Review | Login',
+      'title'=>'Login',
       'desc'=>'Needles and Ink Login Page'
     ]);
 ?>
@@ -24,7 +24,7 @@
 
       </div>
         <div class="form-group">
-              <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
+              <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="3" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
                <?php if( isset($passwordMessage) ): ?>
                 <p><?= $passwordMessage ?></p>
               <?php endif ?>

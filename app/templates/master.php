@@ -38,9 +38,9 @@
       </ul>
      
       <ul class="nav navbar-nav navbar-right">
-       <form class="navbar-form navbar-left">
+       <form class="navbar-form navbar-left" method="post" action="index.php?page=search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="search" name="search" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Search</button>
       </form>
@@ -64,9 +64,9 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-
-
  <?= $this->section('content') ?>
+
+ 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/map.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3G6J2-dbvIjn0c1xy1H9Khnw56COElnA&callback=initMap"type="text/javascript"></script>

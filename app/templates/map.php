@@ -14,12 +14,12 @@
 <article>
 	 	<div>
 	 	<a href="index.php?page=studio&studioid=<?= $studio['id'] ?>">
-	 	<h1> <?= $studio['studio_name'] ?> </h1>
+	 	<h1> <?= $this->e($studio['studio_name']) ?> </h1>
 	 	</a>
-	 	<p><?= $studio['studio_phone'] ?></p>
-	 	<p><?= $studio['studio_address1'] ?>
+	 	<p><?= $this->e($studio['studio_phone']) ?></p>
+	 	<p><?= $this->e($studio['studio_address1']) ?>
 	 		<br>
-	 	<?= $studio['studio_address2'] ?>
+	 	<?= $this->e($studio['studio_address2']) ?>
 	 	</p>
       	</div>
 		</article>

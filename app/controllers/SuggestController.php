@@ -29,7 +29,6 @@ class SuggestController extends PageController {
 		$phone = trim($_POST['studio-phone']);
 		$email = trim($_POST['studio-email']);
 
-
 			if( strlen( $studioName) == 0 ){
 				$this->data['studioNameMessage'] = '<p>Required</p>';
 				$totalErrors++;
@@ -80,6 +79,14 @@ class SuggestController extends PageController {
 		}
 			if($totalErrors == 0){
 
+				$manager = new ImageManager(array('driver' => 'imagick'));
+
+				$image = $manager->make($_FILES['image']['tmp_name']);	
+
+				$fileExtension = $this->getFileExtension($image->mime());
+
+				$image->save('img/uploads/original/');
+
 				$studioName = $this->dbc->real_escape_string($studioName);
 				$desc = $this->dbc->real_escape_string($desc);
 				$streetAddress = $this->dbc->real_escape_string($streetAddress);
@@ -101,4 +108,15 @@ class SuggestController extends PageController {
 					}
 		}
 	}
+
+	private function getFileExtension($mimeType){
+			switch($image->mime()){
+					case'image/png';
+						return'.png';
+					break;
+				}
+
+
+	}
+
 }

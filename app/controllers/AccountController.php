@@ -1,5 +1,7 @@
 <?php
 
+use Intervention\Image\ImageManager;
+
 class AccountController extends PageController {
 
 	public function __construct($dbc){
@@ -18,11 +20,12 @@ class AccountController extends PageController {
 	public function buildHTML(){
 
 		echo $this->plates->render('account', $this->data);
-	}
 
+
+	}
 	
 		private function processNewContactDetails(){
-			
+
 			$totalErrors = 0;
 
 			if( strlen($_POST['first-name']) > 50 ){
@@ -60,11 +63,10 @@ class AccountController extends PageController {
 				$sql = "UPDATE users
 						SET first_name = '$firstName', 
 							last_name = '$lastName' 
-						WHERE id = $userID ";
+						WHERE id = $userID";
 
 				$this->dbc->query( $sql );
 			}
 
 		}
-
-}
+	}

@@ -12,17 +12,17 @@
       </div>
 
       <div class="col-md-6">
-        <h1><?= $studio['studio_name'] ?></h1>
-        <p><?= $studio['description'] ?></p>
+        <h1><?= $this->e($studio['studio_name']) ?></h1>
+        <p><?= $this->e($studio['description']) ?></p>
     		<br>
     	<h4>To make an appointment, our contact details are below!</h4>
-        <p><?= $studio['studio_email'] ?>
+        <p><?= $this->e($studio['studio_email']) ?>
          	<br>
-        <?= $studio['studio_phone'] ?>
+        <?= $this->e($studio['studio_phone']) ?>
          	<br>
-       <?= $studio['studio_address1'] ?>
+       <?= $this->e($studio['studio_address1']) ?>
         	<br>
-        <?= $studio['studio_address2'] ?>
+        <?= $this->e($studio['studio_address2']) ?>
         </p>
      </div>
       </div>
@@ -36,7 +36,7 @@
 
 <!-- Comment box -->
 <?php if(isset($_SESSION['id'])): ?>
-  <form action="index.php?page=studio&studioid=<?= $_GET['studioid'] ?>" method="post">
+  <form action="index.php?page=studio&studioid=<?= $_GET['studio_id'] ?>" method="post">
     <div class="detailBox">
     <div class="titleBox">
       <label>Write your review here!</label>
@@ -50,9 +50,19 @@
                 </div>
                 <div class="commentText">
                      <small>Written by: <?= $comment['author']?></small>
-                      <p><?= $comment['comment'] ?></p>
+                      <p><?= $this->e($comment['comment']) ?></p>
                 </div>
             </li>
+          <?php if(isset($_SESSION['id'])){ 
+
+                if($_SESSION['id'] == $comment['user_id'] ){
+                  
+                  echo 'Delete';
+                  echo '<a href="index.php?page=edit-comment&id='.$comment['id'].'">Edit</a>';
+                }
+
+          }?>
+
          <?php endforeach ?>
         </ul>
         <form class="form-inline" role="form">

@@ -61,7 +61,7 @@
   </div>
   <div class="form-group">
     <label for="exampleInputFile">Upload Studio Image</label>
-    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="image[]">
+    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="image">
       <?= isset($fileMessage) ?  $fileMessage : ''?>
     <small id="fileHelp" class="form-text text-muted">Please make sure your image is no larger than 570px by 570px</small>
   </div>

@@ -1,6 +1,6 @@
 <?php 
   $this->layout('master', [
-      'title'=>'Needles and Ink Review | Home',
+      'title'=>'Home',
       'desc'=>'Home page for Needles and Ink review site'
     ]);
 ?>

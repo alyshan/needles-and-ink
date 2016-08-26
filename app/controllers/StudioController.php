@@ -39,11 +39,12 @@ class StudioController extends PageController {
 				$this->data['studio'] = $result->fetch_assoc();
 			}
 
-			$sql = "SELECT comment, display_name AS author
+			$sql = "SELECT comments.id, user_id, comment, display_name AS author
 					FROM comments
 					JOIN users
 					ON comments.user_id = users.id
 					WHERE studio_id = $studioID
+				
 					ORDER BY created_at DESC";
 
 			$result = $this->dbc->query($sql);

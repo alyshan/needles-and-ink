@@ -59,8 +59,19 @@ switch ($page) {
 		$controller = new SuggestController($dbc);
 	break;
 
+	case 'search':
+		require 'app/controllers/SearchController.php';
+		$controller = new SearchController($dbc);
+	break;
+
+	case 'edit-comment':
+		require 'app/controllers/EditCommentController.php';
+		$controller = new EditCommentController($dbc);
+	break;
+
 	default:
-		echo $plates->render('landing');
+		require 'app/controllers/PageNotFoundController.php';
+		$controller = new PageNotFoundController();
 	break;
 }
 
