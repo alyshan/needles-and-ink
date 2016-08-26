@@ -4,15 +4,6 @@
       'desc'=>'Suggest your favourite Studio'
     ]);
 ?>
-
-<?php if (!isset($_SESSION['id'])):?>
-
-       <h2 id="studio">Please login or regisiter to suggest a studio </h2>
-          <img src="img/beedoo.jpg" class="center-block">
-<? endif;?>
-
-  <?php if(isset($_SESSION['id'])): ?>
-
    <?= isset($suggestMessage) ?  $suggestMessage : ''?>
 
 <form action="index.php?page=suggest" method="post" enctype="multipart/form-data">
@@ -73,4 +64,3 @@
   </div>
 </div>
 </form>
-<? endif;?>
