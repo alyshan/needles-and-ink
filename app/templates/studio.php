@@ -55,7 +55,7 @@
             </li>
       <?php if(isset($_SESSION['id'])){ 
 
-                if($_SESSION['id'] == $comment['user_id'] ){
+                if($_SESSION['id'] == $comment['user_id'] || $_SESSION['privilege'] == 'admin' ){
                   
                   echo 'Delete';
                   echo '<a href="index.php?page=edit-comment&id='.$comment['id'].'">Edit</a>';

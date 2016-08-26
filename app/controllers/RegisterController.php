@@ -121,8 +121,8 @@ private function validateRegistrationForm(){
 			$_SESSION ['id'] = $this->dbc->insert_id;
 			$_SESSION['privilege'] = 'user';
 			
-die($sql);
-			header('location: index.php?page=editDetails');
+
+			header('Location: index.php?page=account');
 		}
 
 	}

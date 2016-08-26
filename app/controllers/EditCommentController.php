@@ -30,8 +30,12 @@ class EditCommentController extends PageController {
 		$commentID = $this->dbc->real_escape_string($_GET['id']);
 		$sql = "SELECT comment, studio_id
 				FROM comments
-				WHERE id = $commentID
-				AND user_id = $userID";
+				WHERE id = $commentID ";
+
+		if($_SESSION['privilege'] != 'admin'){
+
+			$sql .=" AND user_id = $userID";
+		}
 
 		$result = $this->dbc->query($sql);
 
