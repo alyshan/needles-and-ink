@@ -29,7 +29,7 @@ class StudioController extends PageController {
 		$sql = "SELECT studio_name, studio_email, studio_phone, studio_address1, studio_address2, description, image
 				FROM suggest
 				WHERE id = $studioID";
-die($sql);
+
 		$result = $this->dbc->query($sql);
 
 			if( !$result || $result->num_rows == 0 ){

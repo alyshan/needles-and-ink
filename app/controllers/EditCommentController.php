@@ -43,7 +43,7 @@ class EditCommentController extends PageController {
 
 			$theComment = $result->fetch_assoc();
 			$this->data['comment'] = $theComment['comment'];
-			$this->date['studio_id'] = $theComment['studio_id'];
+			$this->data['studio_id'] = $theComment['studio_id'];
 
 		}
 	}

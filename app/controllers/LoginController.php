@@ -34,7 +34,7 @@ private function processLoginForm(){
 
 		$filteredDisplayName = $this->dbc->real_escape_string($_POST['display_name'] );
 
-		$sql = "SELECT id, password
+		$sql = "SELECT id, password, privilege
 				FROM users
 				WHERE display_name = '$filteredDisplayName' ";
 

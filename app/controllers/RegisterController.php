@@ -94,7 +94,9 @@ private function validateRegistrationForm(){
 		$sql = "SELECT email
 				FROM users
 				WHERE email = '$filteredEmail'  ";
+				
 		$result = $this->dbc->query($sql);
+
 		if( !$result || $result->num_rows > 0 ) {
 			$this->emailMessage = 'E-Mail in use';
 			$totalErrors++;
@@ -117,8 +119,9 @@ private function validateRegistrationForm(){
 			$this->dbc->query($sql);
 
 			$_SESSION ['id'] = $this->dbc->insert_id;
+			$_SESSION['privilege'] = 'user';
 			
-
+die($sql);
 			header('location: index.php?page=editDetails');
 		}
 
