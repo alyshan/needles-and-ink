@@ -62,12 +62,9 @@ class StudioController extends PageController {
 
 				$sql = "INSERT INTO comments (comment, user_id, studio_id)
 						 VALUES ('$comment', $userID, $studioID)";
-			
+
 			$this->dbc->query($sql);
-			}
-
-
-
+		}
 
 	}
 
