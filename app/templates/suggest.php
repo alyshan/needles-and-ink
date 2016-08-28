@@ -3,7 +3,7 @@
       'title'=>'Suggest a Studio',
       'desc'=>'Suggest your favourite Studio'
     ]);
-?>
+?> 
    <?= isset($suggestMessage) ?  $suggestMessage : ''?>
 
 <form action="index.php?page=suggest" method="post" enctype="multipart/form-data">

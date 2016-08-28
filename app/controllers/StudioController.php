@@ -59,7 +59,7 @@ class StudioController extends PageController {
 				$comment = $this->dbc->real_escape_string($_POST['comment']);
 				$userID = $_SESSION['id'];
 				$studioID = $this->dbc->real_escape_string($_GET['studio_id']);
-
+				
 				$sql = "INSERT INTO comments (comment, user_id, studio_id)
 						 VALUES ('$comment', $userID, $studioID)";
 

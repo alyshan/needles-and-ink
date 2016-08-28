@@ -1,7 +1,5 @@
 <?php
 
-use Intervention\Image\ImageManager;
-
 class AccountController extends PageController {
 
 	public function __construct($dbc){
@@ -28,41 +26,55 @@ class AccountController extends PageController {
 
 			$totalErrors = 0;
 
-			if( strlen($_POST['first-name']) > 50 ){
-
-				$this->data['firstNameMessage'] = '<p>Must be at most 50 characters</p>';
+				if( strlen( $_POST['first-name']) == 0 ){
+				$this->data['firstNameMessage'] = '<p>Required</p>';
 				$totalErrors++;
-			}
 
-			if( strlen($_POST['last-name']) > 50 ){
-
-				$this->data['lastNameMessage'] = '<p>Must be at most 50 characters</p>';
+			} elseif( strlen( $_POST['first-name']) > 50 ){
+				$this->data['firstNameMessage'] = '<p>Cannont be more than 50 characters</p>';
 				$totalErrors++;
-			}
+		}
 
-			if( strlen($_POST['display-name']) > 10 ){
-
-				$this->data['displayNameMessage'] = '<p>Must be at most 10 characters</p>';
+				if( strlen( $_POST['last-name']) == 0 ){
+				$this->data['lastNameMessage'] = '<p>Required</p>';
 				$totalErrors++;
-			}
 
-			if( strlen($_POST['email']) > 8 ){
-
-				$this->data['emailMessage'] = '<p>Must be at most 8 characters</p>';
+			} elseif( strlen( $_POST['last-name']) > 50 ){
+				$this->data['lastNameMessage'] = '<p>Cannont be more than 50 characters</p>';
 				$totalErrors++;
-			}
+		}
 
+				if( strlen( $_POST['display-name']) == 0 ){
+				$this->data['displayNameMessage'] = '<p>Required</p>';
+				$totalErrors++;
+
+			} elseif( strlen( $_POST['display-name']) > 10 ){
+				$this->data['displayNameMessage'] = '<p>Cannont be more than 10 characters</p>';
+				$totalErrors++;
+		}
+
+
+			if( strlen($_POST['email']) == 0 ){
+				$this->data['emailMessage'] = '<p>Required</p>';
+				$totalErrors++;
+			} elseif( strlen( $_POST['email']) > 50 ){
+				$this->data['emailMessage'] = '<p>Please check E-Mail</p>';
+				$totalErrors++;
+		}
 
 			if( $totalErrors == 0 ){
 
 				$firstName = $this->dbc->real_escape_string($_POST['first-name']);
 				$lastName = $this->dbc->real_escape_string($_POST['last-name']);
-
+				$displayName = $this->dbc->real_escape_string($_POST['display-name']);
+				$email = $this->dbc->real_escape_string($_POST['email']);
 				$userID = $_SESSION['id'];
 
 				$sql = "UPDATE users
 						SET first_name = '$firstName', 
-							last_name = '$lastName' 
+							last_name = '$lastName',
+							display_name = '$displayName',
+							email = '$email', 
 						WHERE id = $userID";
 
 				$this->dbc->query( $sql );

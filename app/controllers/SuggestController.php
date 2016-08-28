@@ -79,13 +79,6 @@ class SuggestController extends PageController {
 		}
 			if($totalErrors == 0){
 
-				$manager = new ImageManager(array('driver' => 'imagick'));
-
-				$image = $manager->make($_FILES['image']['tmp_name']);	
-
-				$fileExtension = $this->getFileExtension($image->mime());
-
-				$image->save('img/uploads/original/');
 
 				$studioName = $this->dbc->real_escape_string($studioName);
 				$desc = $this->dbc->real_escape_string($desc);
@@ -107,16 +100,6 @@ class SuggestController extends PageController {
 						$this->data['suggestMessage'] = 'Something went wrong!';
 					}
 		}
-	}
-
-	private function getFileExtension($mimeType){
-			switch($image->mime()){
-					case'image/png';
-						return'.png';
-					break;
-				}
-
-
 	}
 
 }

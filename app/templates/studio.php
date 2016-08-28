@@ -30,16 +30,14 @@
 
 </section>
 
-  <?php if(!isset($_SESSION['id'])): ?>
-   <h4> Please register an account to view the comments!</h4>
-  <?php endif; ?>
+  
 
 <!-- Comment box -->
-<?php if(isset($_SESSION['id'])): ?>
-  <form action="index.php?page=studio&studioid=<?= $_GET['studio_id'] ?>" method="post">
+
+  <form action="index.php?page=studio&studio_id=<?= $_GET['studio_id'] ?>" method="post">
     <div class="detailBox">
     <div class="titleBox">
-      <label>Write your review here!</label>
+      <label>Comments about this studio!</label>
     </div>
     <div class="actionBox">
         <ul class="commentList">
@@ -64,6 +62,10 @@
           }?>
          <?php endforeach ?>
         </ul>
+    <?php if(!isset($_SESSION['id'])): ?>
+   <h4> Please <a href="index.php?page=register">register an account</a> or <a href="index.php?page=login">login</a> to view the comments!</h4>
+  <?php endif; ?>
+  <?php if(isset($_SESSION['id'])): ?>
         <form class="form-inline" role="form">
             <div class="form-group">
                 <input class="form-control" name="comment" id="exampleTextarea" rows="10" class="col-xs-10" placeholder="Your review...."/>
