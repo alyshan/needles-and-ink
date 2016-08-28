@@ -27,13 +27,13 @@
       <div class="col-md-9 personal-info">
         
         <h3>Personal info</h3>
-        
+        <?= isset($accountMessage) ?  $accountMessage : ''?>
         <form class="form-horizontal" role="form" action="index.php?page=account" method="post"  enctype="multipart/form-data">
           <div class="form-group">
             <label class="col-lg-3 control-label"  name="first-name">First name:</label>
             <div class="col-lg-8">
               <input class="form-control" name="first-name" type="text" value="<?= isset($_POST['save-changes']) ? $_POST['first-name'] : '' ?>">
-                <?php isset($firstNameMessage) ? $firstNameMessage : ''?>
+               <?= isset($firstNameMessage) ?  $firstNameMessage: ''?>
             </div>
           </div>
           
@@ -41,7 +41,7 @@
             <label class="col-lg-3 control-label" name="last-name">Last name:</label>
             <div class="col-lg-8">
               <input class="form-control" type="text" name="last-name" value="<?= isset($_POST['save-changes']) ? $_POST['last-name'] : '' ?>">
-                <?php isset($lastNameMessage) ? $lastNameMessage : ''?>
+                <?= isset($lastNameMessage) ?  $lastNameMessage: ''?>
             </div>
           </div>
 
@@ -49,33 +49,24 @@
             <label class="col-lg-3 control-label" name="email">Email:</label>
             <div class="col-lg-8">
               <input class="form-control" type="text" name="email" value="<?= isset($_POST['save-changes']) ? $_POST['email'] : '' ?>">
-                 <?php isset($displayNameMessage) ? $displayNameMessage : ''?>
+                 <?= isset($emailMessage) ?  $emailMessage: ''?>
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-md-3 control-label" name="display-name">Display Name:</label>
             <div class="col-md-8">
-              <input class="form-control" type="text" name="display-name" value="<?= isset($_POST['save-changes']) ? $_POST['display-name'] : '' ?>">
+              <input class="form-control" type="text" name="display-name" value="<?= isset($_POST['display-name']) ? $_POST['display-name'] : '' ?>">
+               <?= isset($displayNameMessage) ?  $displayNameMessage: ''?>
             </div>
-              <?php if( isset($displayNameMessage) ):?>
-                <p><?= $displayNameMessage ?></p>
-              <?php endif?>
           </div>
 
-          <div class="form-group">
+<!--           <div class="form-group">
             <label class="col-md-3 control-label" name="password">Password:</label>
             <div class="col-md-8">
               <input class="form-control" type="password" value="">
             </div>
-          </div>
- 
-          <div class="form-group">
-            <label class="col-md-3 control-label" name="password">Confirm password:</label>
-            <div class="col-md-8">
-              <input class="form-control" type="password" value="">
-            </div>
-          </div>
+          </div> -->
 
           <div class="form-group">
             <label class="col-md-3 control-label"></label>
